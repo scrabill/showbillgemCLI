@@ -1,8 +1,8 @@
 # ShowbillgemCLI
-Hello World!
-Welcome to your new Broadway gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/showbillgemCLI`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Hello Broadway! This Ruby gem allows theater fans to view all current Broadway and off-Broadway productions, select a show, view the location of the theater and the plot summary for the selected show. Data for this gem was scraped from playbill.com.
+
+Welcome to your new Broadway gem! 
 
 ## Installation
 
@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run: broadway-shows after installing the gem.
 
 ## Development
 
