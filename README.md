@@ -21,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-Run: broadway-shows after installing the gem.
+Run: showbill-shows after installing the gem.
 
 ## Development
 
