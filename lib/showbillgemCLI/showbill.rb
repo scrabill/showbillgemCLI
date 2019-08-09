@@ -2,6 +2,7 @@ class showbillgemCLI::Showbills
   attr_accessor :name, :url, :theater, :summary
 
   @@all = []
+  
   def initialize(name=nil, url=nil)
     @name = name
     @url = url
