@@ -1,5 +1,5 @@
 class showbillgemCLI::Showbills
-  attr_accessor :name, :url, :showdoc, :theater, :summary
+  attr_accessor :name, :url, :theater, :summary
 
   @@all = []
   def initialize(name=nil, url=nil)
