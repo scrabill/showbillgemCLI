@@ -7,9 +7,11 @@ class showbillgemCLI::Showbills
     @name = name
     @url = url
     @@all << self
+    @doc = Nokogiri::(opem("http:www.playbill.com"))
   end
 
   def self.all
+    scrape details
     @@all
   end
 
