@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-site = "https://www.playbill.com"
+url = "https://www.playbill.com"
 
 class ShowbillScrape::Scrape
   
