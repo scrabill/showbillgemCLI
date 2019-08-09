@@ -3,20 +3,26 @@ class Showbills::CLI
 def call
   list_deals
   menu
+  goodbye
 end
 
 def list_shows
-  #here 
-  
+  #here doc
+ puts "Today's Shows:"
+ puts  <<-DOC.gsub /^\s*/, ''
+ doc
+end 
+ 
+ 
 def menu
   puts "Enter the number of the show you'd like more information on or type exit."
-  while input
-  
+  while input != "exit"
+  input = gets.strip.downcase
   case input
   when "1"
-     puts "More info on show 1"
+     puts "More info on show 1..."
   when "2"
-     puts "More info on show 2"
+     puts "More info on show 2..."
    end
   end 
 end  
