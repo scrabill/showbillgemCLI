@@ -1,8 +1,5 @@
-require 'nokogiri'
-requireNokogiri::HTM 'open-uri'
-url = (open(http://www.playbill.com/productions?q=&venue-type=broadway&zip="))
-
-class ShowbillScrape::Showbills
+# url = (open(http://www.playbill.com/productions?q=&venue-type=broadway&zip="))
+class ShowbillgemCLI::Showbillgem
  
   attr_accessor  :title, :location, :showtext
 
@@ -29,14 +26,14 @@ class ShowbillScrape::Showbills
   end
 
   def title
-    @title = self.showdoc.css("div.pb-pl-tile-title").text.strip
+    @title = self.showtext.css("div.pb-pl-tile-title").text.strip
   end
 
   def location
-    @location = self.showdoc.css("div.pb-pl-tile-location").text.strip
+    @location = self.showtext.css("div.pb-pl-tile-location").text.strip
   end
 
   def showtext
-    @showtext = self.showdoc.css("div.bsp-bio-text").text.strip
+    @showtext = self.showtext.css("div.bsp-bio-text").text.strip
   end
 end

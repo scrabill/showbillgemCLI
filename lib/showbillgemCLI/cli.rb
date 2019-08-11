@@ -9,8 +9,6 @@ end
 def list_shows
   #here doc
  puts "Today's Shows:"
- puts  <<-DOC.gsub /^\s*/, ''
- doc
 end 
  
 def menu
@@ -29,9 +27,9 @@ else
   when "2"
      puts "More info on show 2..."
    when "list"
-   end
-  end 
-end  
+  end
+ end  
+end
 
 def goodbye
    puts "Thank you for checking out Playbill.com"
