@@ -12,11 +12,12 @@ def self.show_scraper
  end
 end
   
-  def self.scrape_shows
-    doc = Nokogiri::HTML(open(""http://www.playbill.com/productions?q=&venue-type=broadway&zip=""))	    
-    shows = doc.css("div.pb-pl-tile-title")	    
+  def self.scrape_showbillgem_list(index)
+    showbillgem = ShowbillgemCLI::showbillgem.all[index]
+    doc = Nokogiri::HTML(open(showbillgem.url))    
+    showbillgem = doc.css("div.pb-pl-tile-title")	    
     shows.map do |show|	   
-    self.new(show.text.strip, ""http://www.playbill.com/productions?q=&venue-type=broadway&zip=#{show.attr("href").strip}")	     
+    self.new(show.text.strip, "type=broadway&zip=#{show.attr("href").strip}")	     
     end	
   
 end
