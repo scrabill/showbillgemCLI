@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "showbillgemCLI"
+require_relative './showbillgemCLI/showbillgem'
 showbillgemCLI::CLI.new.call
