@@ -2,7 +2,7 @@ class ShowbillgemCLI::Scraper
 
 def self.show_scraper
   if ShowbillgemCLI::showbillgem.allempty?
-    doc = Nokogiri::HTML(open("http://www.playbill.com/productions?q=&venue-type=broadway&zip=)
+    doc = Nokogiri::HTML(open("http://www.playbill.com/productions?q=&venue-type=broadway&zip))
     array_showbillgem_list = doc.css("li")[1...50]
     array_showbillgem_list.each do |showbillgem_attr|
     showbillgem = ShowbillgemCLI::showbillgem.new

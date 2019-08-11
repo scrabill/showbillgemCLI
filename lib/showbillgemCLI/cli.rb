@@ -1,7 +1,7 @@
 class ShowbillgemCLI::CLI
 
 def list_shows
- puts "Today's Shows:"
+ puts "Current Shows:"
 end 
  
 def menu
@@ -10,7 +10,7 @@ input = nil
   puts "Enter the number of the show you'd like more information on or type list or type exit."
   input = gets.strip.downcase
   if input.to_1 > 0
-  puts @shows[input.to_i-1]
+  puts @showbillgem[input.to_i-1]
 elsif input == "list"
   list_shows
 else  
