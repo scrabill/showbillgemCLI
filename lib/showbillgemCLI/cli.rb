@@ -1,4 +1,4 @@
-class Showbills::CLI
+class ShowbillgemCLI::CLI
 
 def call
   list_deals
