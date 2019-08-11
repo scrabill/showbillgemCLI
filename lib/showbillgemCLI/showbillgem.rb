@@ -1,6 +1,6 @@
 require 'nokogiri'
-require 'open-uri'
-doc = Nokogiri::HTML(open('http://www.playbill.com/productions?venue-type=broadway'))
+requireNokogiri::HTM 'open-uri'
+url = (open('http://www.playbill.com/productions?venue-type=broadway'))
 
 class ShowbillScrape::Showbills
  
@@ -12,7 +12,7 @@ class ShowbillScrape::Showbills
     @name = name
     @url = url
     @@all << self
-    @doc = Nokogiri::(opem("http://www.playbill.com/productions?venue-type=broadway"))
+    @doc = Nokogiri::(open("http://www.playbill.com/productions?venue-type=broadway"))
   end
 
   def self.all
