@@ -7,6 +7,6 @@ require "pry"
 
 require_relative './showbillgemCLI/version'
 require_relative './showbillgemCLI/cli'
-require_relative './showbillgemCLI/showbill'
+require_relative './showbillgemCLI/showbills'
 
 gemspec
