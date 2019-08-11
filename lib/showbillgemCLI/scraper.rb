@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
-url = "https://www.playbill.com"
+doc = Nokogiri::HTML(open('http://www.playbill.com'))
+
 
 class ShowbillScrape::Scrape
   
