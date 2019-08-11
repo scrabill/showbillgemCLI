@@ -4,7 +4,7 @@ url = (open(http://www.playbill.com/productions?q=&venue-type=broadway&zip="))
 
 class ShowbillScrape::Showbills
  
-  attr_accessor :name, :url, :theater, :summary
+  attr_accessor :show, :theater, :summary
 
   @@all = []
   
@@ -22,14 +22,10 @@ class ShowbillScrape::Showbills
 
   def self.scrape_shows
     doc = Nokogiri::HTML(open("http://www.playbill.com/productions?q=&venue-type=broadway&zip="))
-    shows = doc.css("a.color-white.bold")
+    shows = doc.css
     shows.map do |show|
       self.new(show.text.strip, "playbill.com"#{show.attr("href").strip}")
     end
-  end
-
-  def self.find(number)
-    self.all[number-1]
   end
 
   def showdoc
