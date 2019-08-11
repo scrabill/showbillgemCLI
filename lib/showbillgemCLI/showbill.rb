@@ -1,4 +1,9 @@
-class showbillgemCLI::Showbills
+require 'nokogiri'
+require 'open-uri'
+doc = Nokogiri::HTML(open('html://www.playbill.com'))
+
+class ShowbillScrape::Showbills
+ 
   attr_accessor :name, :url, :theater, :summary
 
   @@all = []
