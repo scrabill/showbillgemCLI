@@ -2,7 +2,8 @@ class ShowbillgemCLI::Scraper
 
 def self.show_scraper
   if ShowbillgemCLI::showbillgem.allempty?
-    doc = Nokogiri::HTML(open("http://www.playbill.com/productions?q=&venue-type=broadway&zip))
+    doc = Nokogiri::HTML(open("http://www.playbill.com
+    /productions?q=&venue-type=broadway&zip))
     array_showbillgem_list = doc.css("li")[1...50]
     array_showbillgem_list.each do |showbillgem_attr|
     showbillgem = ShowbillgemCLI::showbillgem.new
@@ -19,12 +20,11 @@ end
     shows.map do |show|	   
     self.new(show.text.strip, "type=broadway&zip=#{show.attr("href").strip}")	     
     end	
-  
 end
   
   def self.find(number)
     self.all[number-1] 
-  end
+end
 
 def showtext
   @showtext = Nokogiri::HTML(open(self.url))

@@ -19,10 +19,9 @@ else
  end  
 end
 
-def goodbye
+ def goodbye
    puts "Thank you for checking out Playbill.com"
-  end
- end
+end
      
      
 
