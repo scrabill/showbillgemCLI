@@ -1,6 +1,6 @@
 # ShowbillgemCLI
 
-Hello Broadway! Welcome to your new Broadway gem! This Ruby gem allows theater fans to view all current Broadway and off-Broadway productions, select a show, view the location of the theater and the plot summary for the selected show. Data for this gem was scraped from playbill.com.
+Hello Broadway! Welcome to your new Broadway gem! This Ruby gem allows theater fans to view all current Broadway productions, select a show, view the location of the theater and the plot summary for the selected show. Data for this gem was scraped from playbill.com.
 
 
 ## Installation
