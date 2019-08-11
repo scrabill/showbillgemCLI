@@ -1,6 +1,17 @@
 source "https://rubygems.org"
 
+source "https://rubygems.org"
+
+require "open-uri"
+require "nokogiri"
+require "pry"
+
+require_relative './showbillgemCLI/version'
+require_relative './showbillgemCLI/cli'
+require_relative './showbillgemCLI/showbill'
+
+gemspec
+
 #git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # Specify your gem's dependencies in showbillgemCLI.gemspec
-gemspec
