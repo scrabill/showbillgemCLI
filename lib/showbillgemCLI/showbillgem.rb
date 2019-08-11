@@ -4,14 +4,14 @@ url = (open(http://www.playbill.com/productions?q=&venue-type=broadway&zip="))
 
 class ShowbillScrape::Showbills
  
-  attr_accessor  :title, :location, :summary
+  attr_accessor  :title, :location, :showtext
 
   @@all = []
   
   def initialize
     @title = title
     @location = location
-    @summary = summary
+    @text = text
     @@all << self
     @url = Nokogiri::(open("http://www.playbill.com/productions?q=&venue-type=broadway&zip="))
   end
@@ -37,7 +37,7 @@ class ShowbillScrape::Showbills
     @theater = self.showdoc.css("div.pb-pl-tile-location").text.strip
   end
 
-  def summary
-    @summary = self.showdoc.css("div.bsp-bio-text").text.strip
+  def text
+    @showtext = self.showdoc.css("div.bsp-bio-text").text.strip
   end
 end
